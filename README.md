@@ -1,6 +1,19 @@
-# GenAI-Powered Mini-SOAR for Phishing Analysis
+# GenAI-Powered Phishing SOAR Platform
 
-This project is a prototype Security Orchestration, Automation, and Response (SOAR) application built with Python. It uses a machine learning model to predict if a URL is malicious and leverages Generative AI to prescribe a response plan. The entire application is containerized with Docker and orchestrated with Docker Compose for easy setup and deployment.
+## Overview
+An advanced Security Orchestration, Automation, and Response (SOAR) system that combines:
+- **Supervised Learning**: Binary classification of URLs as malicious/benign
+- **Unsupervised Learning**: Threat actor attribution via clustering
+- **GenAI Integration**: Automated response plan generation
+
+## Dual-Model Architecture
+1. **Classification Model** (RandomForest):
+   - Input: URL features (SSL state, length, subdomains)
+   - Output: Malicious/Benign verdict
+
+2. **Clustering Model** (K-Means):
+   - Input: Malicious URL features
+   - Output: Threat actor profile (APT, Cybercrime, Hacktivist)
 
 ## Features
 
@@ -73,15 +86,26 @@ With the `Makefile`, running the application is simple.
 
 ## Project Structure
 ```
-mini-soar/
-├── README.md
-├── Makefile
-├── app.py
-├── train_model.py
-├── genai_prescriptions.py
+GenAI-SOAR/
+├── .github/
+│   └── workflows/
+│       └── lint.yml
+├── .streamlit/
+│   └── secrets.toml
+├── app/
+│   ├── app.py
+│   ├── genai_prescriptions.py
+│   └── train_model.py
+├── docker/
+│   └── Dockerfile
+├── docs/
+│   ├── INSTALL.md
+│   └── TESTING.md
+├── models/
+├── .dockerignore
+├── .gitignore
 ├── docker-compose.yml
-├── Dockerfile
-├── requirements.txt
-└── .streamlit/
-    └── secrets.toml
+├── Makefile
+├── README.md
+└── requirements.txt
 ```
