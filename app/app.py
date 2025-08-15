@@ -122,11 +122,11 @@ if not submitted:
 
     with col1:
         st.info(
-            "**How it works:**\n1. **Classify** - Determine if URL is malicious\n2. 🎯 **Attribute** - Identify likely threat actor profile\n3. 📋 **Prescribe** - Generate response plan")
+            "**How it works:**\n1. **Classify** - Determine if URL is malicious\n2.  **Attribute** - Identify likely threat actor profile\n3. **Prescribe** - Generate response plan")
 
     with col2:
         st.info(
-            "**Threat Actor Profiles:**\n **State-Sponsored APT** - Nation-state actors\n **Organized Cybercrime** - Profit-driven groups\n🟡 **Hacktivist** - Ideologically motivated")
+            "**Threat Actor Profiles:**\n1. **State-Sponsored APT** - Nation-state actors\n2. **Organized Cybercrime** - Profit-driven groups\n3. **Hacktivist** - Ideologically motivated")
 
     st.info("Please provide the URL features in the sidebar and click 'Analyze' to begin.")
     if feature_plot:
