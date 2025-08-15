@@ -122,11 +122,11 @@ if not submitted:
 
     with col1:
         st.info(
-            "**How it works:**\n1. 📊 **Classify** - Determine if URL is malicious\n2. 🎯 **Attribute** - Identify likely threat actor profile\n3. 📋 **Prescribe** - Generate response plan")
+            "**How it works:**\n1. **Classify** - Determine if URL is malicious\n2. 🎯 **Attribute** - Identify likely threat actor profile\n3. 📋 **Prescribe** - Generate response plan")
 
     with col2:
         st.info(
-            "**Threat Actor Profiles:**\n🔴 **State-Sponsored APT** - Nation-state actors\n🟠 **Organized Cybercrime** - Profit-driven groups\n🟡 **Hacktivist** - Ideologically motivated")
+            "**Threat Actor Profiles:**\n **State-Sponsored APT** - Nation-state actors\n **Organized Cybercrime** - Profit-driven groups\n🟡 **Hacktivist** - Ideologically motivated")
 
     st.info("Please provide the URL features in the sidebar and click 'Analyze' to begin.")
     if feature_plot:
@@ -236,7 +236,7 @@ else:
             status.update(label="✅ Analysis Complete. No threat found.", state="complete", expanded=False)
 
     # --- Tabs for Organized Output ---
-    tab1, tab2, tab3, tab4 = st.tabs(["📊 **Analysis Summary**", "📈 **Visual Insights**", "📜 **Prescriptive Plan**", "🕵️ **Threat Attribution**"])
+    tab1, tab2, tab3, tab4 = st.tabs([" **Analysis Summary**", "📈 **Visual Insights**", " **Prescriptive Plan**", "🕵️ **Threat Attribution**"])
 
     with tab1:
         st.subheader("Verdict and Key Findings")
